@@ -68,10 +68,10 @@ We currently support MoPub mediation for iOS apps.
 LiftoffAds is a MoPub custom SDK network.
 
 1. Download the [Liftoff MoPub Adapter SDK][latest-mopub].
-2. Import the `.unitypackage` into your project.
+2. Unzip and import the `.unitypackage` into your project.
 3. Initialize MoPub manually with Liftoff as a custom mediated network.
-4. After building for iOS, make sure `LiftoffAds.xcframework` is included in
-   `General -> Frameworks, Libraries and Embedded Content`, select `Do Not Embed`.
+4. After building for iOS, navigate to `Build Settings` and set `Runpath Search
+   Paths` to `@executable_path/Frameworks`.
 
 The following code samples may be used as reference for initializing the
 LiftoffAds SDK through MoPub. Adjust the logic as necessary to meet the
@@ -104,4 +104,4 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
 });
 ```
 
-[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/
+[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.0/LiftoffMoPubAdapter-v1.0.0.zip
