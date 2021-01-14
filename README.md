@@ -82,6 +82,9 @@ Instructions for initializing and requesting ads through MoPub can be found in t
 
 #### MoPub Custom SDK Network
 
+The custom SDK network option must be selected via MoPub. Additional details
+can be found [here](https://github.com/liftoffio/LiftoffAds-iOS#creating-a-mopub-custom-sdk-network).
+
 ```csharp
 MoPub.InitializeSdk(new MoPub.SdkConfiguration
 {
