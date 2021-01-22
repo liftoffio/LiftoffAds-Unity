@@ -70,6 +70,7 @@ LiftoffAds is a MoPub custom SDK network.
 1. Download the [Liftoff MoPub Adapter SDK][latest-mopub].
 2. Unzip and import the `.unitypackage` into your project.
 3. Initialize MoPub manually with Liftoff as a custom mediated network.
+   Make sure to replace the placeholder ad unit ID and API key.
 4. After building for iOS, navigate to `Build Settings` and set `Runpath Search
    Paths` to `@executable_path/Frameworks`.
 
@@ -88,6 +89,7 @@ can be found [here](https://github.com/liftoffio/LiftoffAds-iOS#creating-a-mopub
 ```csharp
 MoPub.InitializeSdk(new MoPub.SdkConfiguration
 {
+    // Replace MOPUB_AD_UNIT_ID
     AdUnitId = "MOPUB_AD_UNIT_ID",
     LogLevel = MoPub.LogLevel.Debug,
     MediatedNetworks = new MoPubBase.MediatedNetwork[]
@@ -99,6 +101,7 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
             AdapterConfigurationClassName = "LiftoffAdapterConfiguration",
             NetworkConfiguration = new Dictionary<string,string>
             {
+                // Replace LIFTOFF_API_KEY with provided API key
                 { "apiKey", "LIFTOFF_API_KEY" },
             },
         }
