@@ -90,7 +90,7 @@ can be found [here](https://github.com/liftoffio/LiftoffAds-iOS#creating-a-mopub
 MoPub.InitializeSdk(new MoPub.SdkConfiguration
 {
     // Replace MOPUB_AD_UNIT_ID
-    AdUnitId = "MOPUB_AD_UNIT_ID",
+    AdUnitId = MOPUB_AD_UNIT_ID,
     LogLevel = MoPub.LogLevel.Debug,
     MediatedNetworks = new MoPubBase.MediatedNetwork[]
     {
@@ -102,7 +102,7 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
             NetworkConfiguration = new Dictionary<string,string>
             {
                 // Replace LIFTOFF_API_KEY with provided API key
-                { "apiKey", "LIFTOFF_API_KEY" },
+                { "apiKey", LIFTOFF_API_KEY },
             },
         }
         #endif
@@ -110,4 +110,4 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
 });
 ```
 
-[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.0/LiftoffMoPubAdapter-v1.0.0.zip
+[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.1/LiftoffMoPubAdapter-v1.0.1.zip
