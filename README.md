@@ -110,4 +110,4 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
 });
 ```
 
-[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.1/LiftoffMoPubAdapter-v1.0.1.zip
+[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.2/LiftoffMoPubAdapter-v1.0.2.zip
