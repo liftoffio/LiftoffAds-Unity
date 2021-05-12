@@ -19,6 +19,7 @@ For any other questions, please email sdk@liftoff.io.
 - [Integration](#integration)
   - [MoPub Mediation](#mopub-mediation)
     - [MoPub Custom SDK Network](#mopub-custom-sdk-network)
+  - [Test Ad Units](#test-ad-units)
 
 ## Overview
 
@@ -109,5 +110,17 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
     }
 });
 ```
+
+### Test Ad Units
+
+Use the following ad unit IDs to display a LiftoffAds test creative and verify
+successful integration.
+
+| Ad Unit ID                        | Size           | Type                       |
+| --------------------------------- | -------------- | -------------------------- |
+| `liftoff-banner-mrect-test`       | Banner / MRECT | VAST video, HTML video     |
+| `liftoff-interstitial-video-test` | Interstitial   | VAST video                 |
+| `liftoff-interstitial-html-test`  | Interstitial   | HTML video                 |
+| `liftoff-rewarded-video-test`     | Rewarded Interstitial | VAST video
 
 [latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.2/LiftoffMoPubAdapter-v1.0.2.zip
