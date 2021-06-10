@@ -1,7 +1,7 @@
 # LiftoffAds Unity SDK
 
 This repository describes the LiftoffAds Unity SDK technical integration.
-LiftoffAds Unity SDK currently supports iOS apps using MoPub mediation.
+LiftoffAds Unity SDK currently supports iOS/Android apps using MoPub mediation.
 
 For help configuring and testing ad units or setting up reporting, please
 contact your Liftoff POC.
@@ -32,6 +32,8 @@ For any other questions, please email sdk@liftoff.io.
 
 - iPhone
 - iPad
+- Android phones
+- Android tablets
 
 ### Supported Ad Sizes
 
@@ -52,7 +54,7 @@ For any other questions, please email sdk@liftoff.io.
 ## Development Requirements
 
 The LiftoffAds Unity SDK relies on [External Dependency Manager for Unity](https://github.com/googlesamples/unity-jar-resolver)
-to pull in the required iOS dependencies.
+to pull in the required iOS/Android dependencies.
 
 To integrate the LiftoffAds Unity SDK, you will need at minimum:
 
@@ -60,10 +62,11 @@ To integrate the LiftoffAds Unity SDK, you will need at minimum:
 - XCode 11.4 or later
 - Unity 2018.4 or later
 - CocoaPods 1.10.0 or later
+- Android API >= 19
 
 ## Integration
 
-We currently support MoPub mediation for iOS apps.
+We currently support MoPub mediation for iOS/Android apps.
 
 ### MoPub Mediation
 
@@ -73,7 +76,7 @@ LiftoffAds is a MoPub custom SDK network.
 2. Unzip and import the `.unitypackage` into your project.
 3. Initialize MoPub manually with Liftoff as a custom mediated network.
    Make sure to replace the placeholder ad unit ID and API key.
-4. After building for iOS, navigate to `Build Settings` and set `Runpath Search
+4. When building for iOS, navigate to `Build Settings` and set `Runpath Search
    Paths` to `@executable_path/Frameworks`.
 
 The following code samples may be used as reference for initializing the
@@ -86,7 +89,8 @@ Instructions for initializing and requesting ads through MoPub can be found in t
 #### MoPub Custom SDK Network
 
 The custom SDK network option must be selected via MoPub. Additional details
-can be found [here](https://github.com/liftoffio/LiftoffAds-iOS#creating-a-mopub-custom-sdk-network).
+can be found in the [iOS docs](https://github.com/liftoffio/LiftoffAds-iOS#creating-a-mopub-custom-sdk-network)
+and [Android docs](https://github.com/liftoffio/LiftoffAds-Android#creating-a-mopub-custom-sdk-network).
 
 ```csharp
 MoPub.InitializeSdk(new MoPub.SdkConfiguration
@@ -97,7 +101,6 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
     MediatedNetworks = new MoPubBase.MediatedNetwork[]
     {
         // Existing mediation networks ...
-        #if UNITY_IOS
         new MoPubBase.MediatedNetwork
         {
             AdapterConfigurationClassName = "LiftoffAdapterConfiguration",
@@ -107,7 +110,6 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
                 { "apiKey", LIFTOFF_API_KEY },
             },
         }
-        #endif
     }
 });
 ```
@@ -150,4 +152,4 @@ Reporting is available via programmatic API or scheduled emails.
   * Revenue
   * eCPM
 
-[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.2/LiftoffMoPubAdapter-v1.0.2.zip
+[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.1.0/LiftoffMoPubAdapter-v1.1.0.zip
