@@ -20,6 +20,7 @@ For any other questions, please email sdk@liftoff.io.
   - [MoPub Mediation](#mopub-mediation)
     - [MoPub Custom SDK Network](#mopub-custom-sdk-network)
   - [Test Ad Units](#test-ad-units)
+- [Reporting](#reporting)
 
 ## Overview
 
@@ -122,5 +123,31 @@ successful integration.
 | `liftoff-interstitial-video-test` | Interstitial   | VAST video                 |
 | `liftoff-interstitial-html-test`  | Interstitial   | HTML video                 |
 | `liftoff-rewarded-video-test`     | Rewarded Interstitial | VAST video
+
+## Reporting
+
+Reporting is available via programmatic API or scheduled emails.
+
+* [Reporting API documentation](https://liftoff.io/support/publisher-reporting-api/)
+* To receive scheduled email reports, contact your Liftoff POC with your desired
+  recipient email addresses. By default, you will receive daily and monthly
+  reports. The columns below are included; for further customization, contact
+  your Liftoff POC.
+  * Date
+  * OS
+  * Bundle
+  * Ad Unit
+  * Ad Unit ID
+  * Country
+  * Rewarded
+  * Size
+  * Requests
+  * Fills
+  * Fill Rate
+  * Impressions
+  * Clicks
+  * CTR
+  * Revenue
+  * eCPM
 
 [latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.0.2/LiftoffMoPubAdapter-v1.0.2.zip
