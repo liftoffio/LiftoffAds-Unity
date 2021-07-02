@@ -103,7 +103,12 @@ MoPub.InitializeSdk(new MoPub.SdkConfiguration
         // Existing mediation networks ...
         new MoPubBase.MediatedNetwork
         {
+            #if UNITY_IOS
             AdapterConfigurationClassName = "LiftoffAdapterConfiguration",
+            #endif
+            #if UNITY_ANDROID
+            AdapterConfigurationClassName = "com.mopub.mobileads.LiftoffAdapterConfiguration",
+            #endif
             NetworkConfiguration = new Dictionary<string,string>
             {
                 // Replace LIFTOFF_API_KEY with provided API key
