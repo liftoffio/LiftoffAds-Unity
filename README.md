@@ -157,4 +157,4 @@ Reporting is available via programmatic API or scheduled emails.
   * Revenue
   * eCPM
 
-[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.1.0/LiftoffMoPubAdapter-v1.1.0.zip
+[latest-mopub]: https://github.com/liftoffio/LiftoffAds-Unity/releases/download/mopub-v1.2.1/LiftoffMoPubAdapter-v1.2.1.zip
